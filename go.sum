@@ -26,8 +26,8 @@ github.com/envoyproxy/protoc-gen-validate v0.1.0/go.mod h1:iSmxcyjqTsJpI2R4NaDN7
 github.com/fsnotify/fsnotify v1.5.4/go.mod h1:OVB6XrOHzAwXMpEM7uPOzcehqUV2UqJxmVXmkdnm1bU=
 github.com/ghodss/yaml v1.0.0/go.mod h1:4dBDuWmgqj2HViK6kFavaiC9ZROes6MMH2rRYeMEF04=
 github.com/go-kratos/aegis v0.1.2/go.mod h1:jYeSQ3Gesba478zEnujOiG5QdsyF3Xk/8owFUeKcHxw=
-github.com/go-kratos/kratos/v2 v2.3.1 h1:Qfx3JSEIrfZl0f8mXvbeGv3tRIZ2L/ArhcKwxAr3uMo=
-github.com/go-kratos/kratos/v2 v2.3.1/go.mod h1:5acyLj4EgY428AJnZl2EwCrMV1OVlttQFBum+SghMiA=
+github.com/go-kratos/kratos/v2 v2.4.0 h1:3yZjvjCdV+zJQrb5zUWCLrzK/RrGoC78vaQQ1jMmBGI=
+github.com/go-kratos/kratos/v2 v2.4.0/go.mod h1:5acyLj4EgY428AJnZl2EwCrMV1OVlttQFBum+SghMiA=
 github.com/go-logr/logr v1.2.2/go.mod h1:jdQByPbusPIv2/zmleS9BjJVeZ6kBagPoEUsqbVz/1A=
 github.com/go-logr/logr v1.2.3/go.mod h1:jdQByPbusPIv2/zmleS9BjJVeZ6kBagPoEUsqbVz/1A=
 github.com/go-logr/stdr v1.2.2/go.mod h1:mMo/vtBO5dYbehREoey6XUKy/eSumjCCveDpRre4VKE=
@@ -93,8 +93,8 @@ github.com/stretchr/testify v1.8.0 h1:pSgiaMZlXftHpm5L7V1+rVB+AZJydKsMxsQBIJw4PK
 github.com/stretchr/testify v1.8.0/go.mod h1:yNjHg4UonilssWZ8iaSj1OCr/vHnekPRkoO+kdMU+MU=
 github.com/tklauser/go-sysconf v0.3.9/go.mod h1:11DU/5sG7UexIrp/O6g35hrWzu0JxlwQ3LSFUzyeuhs=
 github.com/tklauser/numcpus v0.3.0/go.mod h1:yFGUr7TUHQRAhyqBcEg0Ge34zDBAsIvJJcyE6boqnA8=
-github.com/wxxiong6/kratos-pkg-zap_log v0.0.0-20220707194557-f3cfd8ac1064 h1:L/bM6o5a5LlXB72Qd5q6n5E1fKnHVCKPfRMrE9hWkBg=
-github.com/wxxiong6/kratos-pkg-zap_log v0.0.0-20220707194557-f3cfd8ac1064/go.mod h1:SyqKMQZ0WuimQw2Jk5AZzt52tOCdS1Z58tp7WAEf6ws=
+github.com/wxxiong6/kratos-pkg v0.0.1 h1:JCMPYKg8yUkISP/YfdiirVrbCBsPck4nFHIkT8fDnxM=
+github.com/wxxiong6/kratos-pkg v0.0.1/go.mod h1:hMIhrN2bZ1lddGnX0kqwlZDrZe3hMLqFoWltJGIl5FE=
 github.com/yuin/goldmark v1.3.5/go.mod h1:mwnBkeHKe2W/ZEtQ+71ViKU8L12m81fl3OWwC1Zlc8k=
 go.opentelemetry.io/otel v1.7.0/go.mod h1:5BdUoMIz5WEs0vt0CUEMtSSaTSHBBVwrhnz7+nrD5xk=
 go.opentelemetry.io/otel/sdk v1.7.0/go.mod h1:uTEOTwaqIVuTGiJN7ii13Ibp75wJmYUDe374q6cZwUU=
