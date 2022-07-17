@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/wxxiong6/kratos-pkg-zap_log/zap_log"
+	"github.com/wxxiong6/kratos-pkg/zap_log"
 	"go.uber.org/zap"
 )
 
