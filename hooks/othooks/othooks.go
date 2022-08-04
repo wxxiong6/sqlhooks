@@ -2,13 +2,15 @@ package othooks
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/opentracing/opentracing-go"
 	"github.com/opentracing/opentracing-go/log"
+	"go.opentelemetry.io/otel/trace"
 )
 
 type Hook struct {
-	tracer opentracing.Tracer
+	tracer trace.Tracer
 }
 
 func New(tracer opentracing.Tracer) *Hook {
@@ -16,22 +18,20 @@ func New(tracer opentracing.Tracer) *Hook {
 }
 
 func (h *Hook) Before(ctx context.Context, query string, args ...interface{}) (context.Context, error) {
-	parent := opentracing.SpanFromContext(ctx)
+	parent := h.tracer.SpanFromContext(ctx)
 	if parent == nil {
 		return ctx, nil
 	}
 
-	span := h.tracer.StartSpan("sql", opentracing.ChildOf(parent.Context()))
-	span.LogFields(
-		log.String("query", query),
-		log.Object("args", args),
-	)
+	span := h.tracer.Start(ctx, "sql")
+	span.SetAttributes(attribute.key("query").String(fmt.Sprintf("%v", query)))
+	span.SetAttributes(attribute.key("args").String(fmt.Sprintf("%v", args)))
 
-	return opentracing.ContextWithSpan(ctx, span), nil
+	return ctx, nil
 }
 
 func (h *Hook) After(ctx context.Context, query string, args ...interface{}) (context.Context, error) {
-	span := opentracing.SpanFromContext(ctx)
+	span := h.trace.SpanFromContext(ctx)
 	if span != nil {
 		defer span.Finish()
 	}
@@ -40,7 +40,7 @@ func (h *Hook) After(ctx context.Context, query string, args ...interface{}) (co
 }
 
 func (h *Hook) OnError(ctx context.Context, err error, query string, args ...interface{}) error {
-	span := opentracing.SpanFromContext(ctx)
+	span := h.trace.SpanFromContext(ctx)
 	if span != nil {
 		defer span.Finish()
 		span.SetTag("error", true)
